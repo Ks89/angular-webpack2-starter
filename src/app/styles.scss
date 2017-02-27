@@ -5,6 +5,9 @@
 @import '@angular/material/core/theming/all-theme';
 // Plus imports for other components in your app.
 
+// import font-awesome
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 @include md-core();
@@ -45,7 +48,7 @@ html, body {
   font-family: $primary-font;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px; 
+  line-height: 20px;
 }
 
 pre {

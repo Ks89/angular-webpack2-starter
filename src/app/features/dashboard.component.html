@@ -1,5 +1,5 @@
 <header>
-  <h3> Welcome to the Dashboard {{user.name}}!</h3>
+  <h3> Welcome to the Dashboard {{user.name}}! <i class="fa fa-user" aria-hidden="true"></i></h3>
 </header>
 <section>
   <form [formGroup]="form" (ngSubmit)="submitState()" autocomplete="off">
@@ -10,3 +10,4 @@
   <br><br>
     <button id="my-logout-button" md-raised-button color="accent" (click)="logout()">Logout</button>
 </section>
+
