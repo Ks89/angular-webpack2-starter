@@ -19,15 +19,15 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     <li>subscribed to all outputs (hasData, close, show, firstImage, lastImage)</li>
   </ul>
   <br>
-  <modalGallery [modalImages]="images"
-                [downloadable]="false"
-                [showExtUrlButton]="true"
-                [description]="customDescription"
-                (hasData)="onImageLoaded($event)"
-                (close)="onCloseImageModal($event)"
-                (show)="onVisibleIndex($event)"
-                (firstImage)="onIsFirstImage($event)"
-                (lastImage)="onIsLastImage($event)"></modalGallery>
+  <modal-gallery [modalImages]="images"
+                 [downloadable]="false"
+                 [showExtUrlButton]="true"
+                 [description]="customDescription"
+                 (hasData)="onImageLoaded($event)"
+                 (close)="onCloseImageModal($event)"
+                 (show)="onVisibleIndex($event)"
+                 (firstImage)="onIsFirstImage($event)"
+                 (lastImage)="onIsLastImage($event)"></modal-gallery>
 </section>
 <section id="Images2">
   <h3>2 - Observable of images with delay(300) + download (both 'ctrl+s' and button)</h3>
@@ -41,15 +41,15 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     <li>subscribed to all outputs (hasData, close, show, firstImage, lastImage)</li>
   </ul>
   <br>
-  <modalGallery [modalImages]="images"
-                [showDownloadButton]="true"
-                [downloadable]="true"
-                [showExtUrlButton]="true"
-                (hasData)="onImageLoaded($event)"
-                (close)="onCloseImageModal($event)"
-                (show)="onVisibleIndex($event)"
-                (firstImage)="onIsFirstImage($event)"
-                (lastImage)="onIsLastImage($event)"></modalGallery>
+  <modal-gallery [modalImages]="images"
+                 [showDownloadButton]="true"
+                 [downloadable]="true"
+                 [showExtUrlButton]="true"
+                 (hasData)="onImageLoaded($event)"
+                 (close)="onCloseImageModal($event)"
+                 (show)="onVisibleIndex($event)"
+                 (firstImage)="onIsFirstImage($event)"
+                 (lastImage)="onIsLastImage($event)"></modal-gallery>
 </section>
 <section id="Images3">
   <h3>3 - Array of images + download (both 'ctrl+s' and button)</h3>
@@ -63,16 +63,16 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     <li>subscribed to all outputs (hasData, close, show, firstImage, lastImage)</li>
   </ul>
   <br>
-  <modalGallery [modalImages]="imagesArray"
-                [showDownloadButton]="true"
-                [downloadable]="true"
-                [showExtUrlButton]="false"
-                [description]="customFullDescription"
-                (hasData)="onImageLoaded($event)"
-                (close)="onCloseImageModal($event)"
-                (show)="onVisibleIndex($event)"
-                (firstImage)="onIsFirstImage($event)"
-                (lastImage)="onIsLastImage($event)"></modalGallery>
+  <modal-gallery [modalImages]="imagesArray"
+                 [showDownloadButton]="true"
+                 [downloadable]="true"
+                 [showExtUrlButton]="false"
+                 [description]="customFullDescription"
+                 (hasData)="onImageLoaded($event)"
+                 (close)="onCloseImageModal($event)"
+                 (show)="onVisibleIndex($event)"
+                 (firstImage)="onIsFirstImage($event)"
+                 (lastImage)="onIsLastImage($event)"></modal-gallery>
 </section>
 <section id="Images4">
   <br>
@@ -87,12 +87,12 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
   </ul>
   <br>
   <!-- both showDownloadButton and downloadable are false by default -->
-  <modalGallery [modalImages]="singleImage"
-                (hasData)="onImageLoaded($event)"
-                (close)="onCloseImageModal($event)"
-                (show)="onVisibleIndex($event)"
-                (firstImage)="onIsFirstImage($event)"
-                (lastImage)="onIsLastImage($event)"></modalGallery>
+  <modal-gallery [modalImages]="singleImage"
+                 (hasData)="onImageLoaded($event)"
+                 (close)="onCloseImageModal($event)"
+                 (show)="onVisibleIndex($event)"
+                 (firstImage)="onIsFirstImage($event)"
+                 (lastImage)="onIsLastImage($event)"></modal-gallery>
 </section>
 <section id="Images5">
   <br>
@@ -115,21 +115,21 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     </div>
   </div>
   <div *ngIf="openModalWindow">
-    <modalGallery [modalImages]="imagesArray"
-                  [imagePointer]="imagePointer"
-                  [downloadable]="true"
-                  [showExtUrlButton]="true"
-                  (hasData)="onImageLoaded($event)"
-                  (close)="onCloseImageModal($event)"
-                  (show)="onVisibleIndex($event)"
-                  (firstImage)="onIsFirstImage($event)"
-                  (lastImage)="onIsLastImage($event)"></modalGallery>
+    <modal-gallery [modalImages]="imagesArray"
+                   [imagePointer]="imagePointer"
+                   [downloadable]="true"
+                   [showExtUrlButton]="true"
+                   (hasData)="onImageLoaded($event)"
+                   (close)="onCloseImageModal($event)"
+                   (show)="onVisibleIndex($event)"
+                   (firstImage)="onIsFirstImage($event)"
+                   (lastImage)="onIsLastImage($event)"></modal-gallery>
   </div>
 </section>
 <br><br>
 <section id="Images6">
   <br>
-  <h3>6 - Observable with thumbnail pointers + download (only 'ctrl+s', without button)</h3>
+  <h3>6 - Observable with thumbnail pointers and delay(300) + download (only 'ctrl+s', without button)</h3>
   <p>modalGallery with</p>
   <ul>
     <li>modalImages is an <b>Observable&lt;Array&lt;Image&gt;&gt;</b> with 300ms of delay (to simulate a network request)</li>
@@ -148,15 +148,15 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     </div>
   </div>
   <div *ngIf="openModalWindowObservable">
-    <modalGallery [modalImages]="images"
-                  [imagePointer]="imagePointerObservable"
-                  [downloadable]="true"
-                  [showExtUrlButton]="false"
-                  (hasData)="onImageLoaded($event)"
-                  (close)="onCloseImageModal($event)"
-                  (show)="onVisibleIndex($event)"
-                  (firstImage)="onIsFirstImage($event)"
-                  (lastImage)="onIsLastImage($event)"></modalGallery>
+    <modal-gallery [modalImages]="images"
+                   [imagePointer]="imagePointerObservable"
+                   [downloadable]="true"
+                   [showExtUrlButton]="false"
+                   (hasData)="onImageLoaded($event)"
+                   (close)="onCloseImageModal($event)"
+                   (show)="onVisibleIndex($event)"
+                   (firstImage)="onIsFirstImage($event)"
+                   (lastImage)="onIsLastImage($event)"></modal-gallery>
   </div>
 </section>
 <br><br>
@@ -172,12 +172,12 @@ If you want, you can also <b>add a random image</b> to every example  <button cl
     <li>subscribed to all outputs (hasData, close, show, firstImage, lastImage)</li>
   </ul>
   <br>
-  <modalGallery [modalImages]="imagesArraySubscribed"
-                (hasData)="onImageLoaded($event)"
-                (close)="onCloseImageModal($event)"
-                (show)="onVisibleIndex($event)"
-                (firstImage)="onIsFirstImage($event)"
-                (lastImage)="onIsLastImage($event)"></modalGallery>
+  <modal-gallery [modalImages]="imagesArraySubscribed"
+                 (hasData)="onImageLoaded($event)"
+                 (close)="onCloseImageModal($event)"
+                 (show)="onVisibleIndex($event)"
+                 (firstImage)="onIsFirstImage($event)"
+                 (lastImage)="onIsLastImage($event)"></modal-gallery>
 </section>
 <br><br>
 <h4>Created by Stefano Cappa (Ks89)</h4>
