@@ -43,7 +43,7 @@ import { ModalGalleryModule } from 'angular-modal-gallery';
   imports: [
     CommonModule,
     HttpModule,
-    ModalGalleryModule.forRoot()  // <------------------------ angular-modal-gallery
+    ModalGalleryModule.forRoot(),  // <------------------------ angular-modal-gallery
     APP_IMPORTS,
     IdlePreloadModule.forRoot(), // forRoot ensures the providers are only created once
     RouterModule.forRoot(routes, { useHash: false, preloadingStrategy: IdlePreload }),
