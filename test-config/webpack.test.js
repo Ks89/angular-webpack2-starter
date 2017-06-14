@@ -25,6 +25,10 @@ const STORE_DEV_TOOLS = require('../constants').STORE_DEV_TOOLS;
  */
 module.exports = {
 
+  entry: {
+    main: './src/main.browser'
+  },
+
   /**
    * Source map for Karma from the help of karma-sourcemap-loader &  karma-webpack
    *
@@ -116,6 +120,11 @@ module.exports = {
        * See: https://github.com/webpack/raw-loader
        */
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'], exclude: [root('src/index.html')] },
+
+      {
+        test: /\.scss$/,
+        loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+      },
 
       /**
        * Raw loader support for *.html

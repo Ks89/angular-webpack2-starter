@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IdlePreload, IdlePreloadModule } from '@angularclass/idle-preload';
@@ -9,7 +10,6 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { useLogMonitor } from '@ngrx/store-log-monitor';
 
-import { routes } from './app.routing';
 import { rootReducer } from './reducers';
 import { StoreDevToolsModule } from './features/store-devtools.module';
 import { UserEffects } from './user/user.effects';
@@ -27,11 +27,10 @@ if (ENV === 'development' && !AOT &&
 ]);
 
 export const APP_IMPORTS = [
+  BrowserAnimationsModule,
   EffectsModule.run(UserEffects),
   MaterialModule,
   ReactiveFormsModule,
-  IdlePreloadModule.forRoot(), // forRoot ensures the providers are only created once
-  RouterModule.forRoot(routes, { useHash: false, preloadingStrategy: IdlePreload }),
   RouterStoreModule.connectRouter(),
   StoreModule.provideStore(rootReducer),
   STORE_DEV_TOOLS_IMPORTS,
