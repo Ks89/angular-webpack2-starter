@@ -8,6 +8,11 @@ import { AppModule } from './app/app.module';
 import { BrowserAppModule } from './app/browser.app.module';
 import { decorateModuleRef } from './environment';
 
+
+// add these here!!!!
+import 'hammerjs';
+import 'mousetrap';
+
 if ('production' === ENV) {
   enableProdMode();
 }

@@ -31,6 +31,8 @@ import { AppComponent } from './app.component';
 
 import { AppState } from './reducers';
 
+import { ModalGalleryModule } from 'angular-modal-gallery';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { AppState } from './reducers';
     HttpModule,
     APP_IMPORTS,
     RouterModule.forRoot(routes, { useHash: false, preloadingStrategy: PreloadAllModules }),
+    ModalGalleryModule.forRoot()
   ],
   bootstrap: [AppComponent],
   exports: [AppComponent],

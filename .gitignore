@@ -33,3 +33,6 @@ ts-node
 /**/*.css.ts
 /**/*.css.shim.ts
 dll/
+
+/src/assets/fonts/FontAwesome.*
+/src/assets/fonts/fontawesome-*

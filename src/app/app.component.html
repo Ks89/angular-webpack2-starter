@@ -20,7 +20,8 @@
   <ul *ngFor="let view of views">
     <li><a [routerLink]="view.link">{{view.name}}</a></li>
   </ul>
+
   <router-outlet (activate)="activateEvent($event)" (deactivate)="deactivateEvent($event)"></router-outlet>
 <!--</md-card>
 </md-sidenav-container>-->
-<my-store-devtools *ngIf="showMonitor"></my-store-devtools>
+<!--<my-store-devtools *ngIf="showMonitor"></my-store-devtools>-->
