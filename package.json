@@ -111,7 +111,7 @@
     "@ngrx/store-devtools": "3.2.4",
     "@ngrx/store-log-monitor": "3.0.2",
     "@nguniversal/express-engine": "1.0.0-beta.3",
-    "angular-modal-gallery": "^3.4.0-rc.1",
+    "angular-modal-gallery": "^4.0.0",
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cookie-parser": "1.4.3",
